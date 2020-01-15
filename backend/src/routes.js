@@ -15,7 +15,7 @@ routes.post('/devs', async (req, res) => {
 
   const techsArray = techs.split(',').map((tech) => tech.trim());
 
-  await Dev.create({
+  const dev = await Dev.create({
     github_username,
     name,
     avatar_url,
