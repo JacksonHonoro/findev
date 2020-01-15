@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const axios = require('axios');
+const Dev = require('./models/Dev');
 
 const routes = Router();
 
@@ -14,7 +15,15 @@ routes.post('/devs', async (req, res) => {
 
   const techsArray = techs.split(',').map((tech) => tech.trim());
 
-  return res.json({});
+  await Dev.create({
+    github_username,
+    name,
+    avatar_url,
+    bio,
+    techs: techsArray,
+  });
+
+  return res.json(dev);
 });
 
 module.exports = routes;
