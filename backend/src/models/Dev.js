@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const PointSchema = require('./utils/PointSchema');
 
+mongoose.set('useCreateIndex', true);
+
 const DevSchema = new mongoose.Schema({
   name: String,
   github_username: String,
