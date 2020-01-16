@@ -1,18 +1,13 @@
-import React {useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {StyleSheet} from 'react-native';
 import {MapView} from 'react-native-maps';
 
-
-
 export default function Main() {
   useEffect(() => {
-    async function loadInitialPosition() {
-
-    }
+    async function loadInitialPosition() {}
 
     loadInitialPosition();
   }, []);
-
 
   return <MapView style={styles.map} />;
 }
