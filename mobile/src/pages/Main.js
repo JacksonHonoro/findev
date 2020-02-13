@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import {MapView} from 'react-native-maps';
 
 export default function Main() {
@@ -9,7 +9,7 @@ export default function Main() {
     loadInitialPosition();
   }, []);
 
-  return <MapView style={styles.map} />;
+  return <View style={styles.map} />;
 }
 
 const styles = StyleSheet.create({
